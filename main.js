@@ -1,14 +1,20 @@
 const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
 const app = express()
 
-app.use(express.static('public'))
 
+// static files
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname +  'public/css'))
+
+//set templating engine
+app.use(expressLayouts)
 app.set('view engine', 'ejs')
 
+// navigation
+app.get('', (req, res) => {
+    res.render('index')
+})
 
 
-const userRouter = require('./routes/user')
-
-app.use('/user', userRouter)
-
-app.listen(3001);
+app.listen(3021);
