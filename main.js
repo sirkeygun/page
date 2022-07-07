@@ -1,20 +1,21 @@
-const express = require('express')
-const expressLayouts = require('express-ejs-layouts')
-const app = express()
+var express = require('express');
+var app = express();
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
-// static files
-app.use(express.static('public'))
-app.use('/css', express.static(__dirname +  'public/css'))
+// use res.render to load up an ejs view file
 
-//set templating engine
-app.use(expressLayouts)
-app.set('view engine', 'ejs')
+// index page
+app.use(express.static('public'));
+app.get('/', function(req, res) {
+  res.render('pages/index');
+});
 
-// navigation
-app.get('', (req, res) => {
-    res.render('index')
-})
+// about page
+app.get('/about', function(req, res) {
+  res.render('pages/about');
+});
 
-
-app.listen(3021);
+app.listen(8080);
+console.log('Server is listening on port 8080');
