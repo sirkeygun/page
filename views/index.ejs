@@ -2,24 +2,26 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head'); %>
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <%- include('layouts/head'); %>
 </head>
 
 <body class="container">
 
     <header>
-        <%- include('../partials/header'); %>
+        <%- include('layouts/header'); %>
     </header>
     <main>
+        <% for (var i = 0; i < Device; i++); { %>
         <div class="jumbotron">
             <h1>t</h1>
             <p>Welcome to </p>
+            <%= Device.name %>
         </div>
+        <% } %>
     </main>
 
     <footer>
-        <%- include('../partials/footer'); %>
+        <%- include('layouts/footer'); %>
     </footer>
 
 </body>

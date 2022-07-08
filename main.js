@@ -1,18 +1,26 @@
+require("dotenv").config()
+
 var express = require('express');
 var app = express();
 
+const mongoose = require('mongoose')
+
+mongoose.connect(process.env.MONGODB_URI)
+
 // set the view engine to ejs
-app.set('view engine', 'ejs');
+const ejs = require('ejs')
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
 
-// use res.render to load up an ejs view file
+// Import Controllers
+const homepageControllers = require('./controllers/homepage');
+const contactusController = require('./controllers/contactUs')
+const aboutController = require('./controllers/aboutus')
 
-// index page
-app.use(express.static(__dirname + '/public'));
-app.get('/', function(req, res) {
-  res.render('pages/index');
-});
-
-// about page
+// Create routes
+app.get('/', homepageControllers)
+app.get('/contactus', contactusController)
+app.get('/about', aboutController)
 
 
 app.listen(8080);
