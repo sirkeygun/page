@@ -6,6 +6,7 @@ const DevicesSchema = new Schema({
     name: String,
     model: String,
     releaseDate: String,
+    blog: String,
     dateUploaded: {
         type: Date,
         default: new Date()

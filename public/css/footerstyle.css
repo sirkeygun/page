@@ -1,4 +1,18 @@
 .footer-container {
-    background-color: rgb(107, 107, 107);
+    display: flex;
+    background-color: #d4cbcb;
+    justify-content: space-between;
 }
 
+.footer-menu ul li {
+    list-style: none;
+    display: inline;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .footer-container {
+        /* display: flex;
+        justify-content: center; */
+    }
+}
