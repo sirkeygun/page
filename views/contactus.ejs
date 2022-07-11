@@ -11,11 +11,16 @@
         <%- include('layouts/header'); %>
     </header>
    <main>
-        <form action="/contact/us" method="post">
-            <input type="text" placeholder="name" name="name">
-            <input type="email" name="email" id="" placeholder="email">
-            <input type="text" name="subject" placeholder="subject">
-            <textarea name="message" id="" cols="30" rows="10" placeholder="message"></textarea>
+    <h1 style="text-align: center;">Contact us</h1>
+        <form action="/contact/us" class="contact" method="post">
+            <label>Enter your full name;</label>
+            <input type="text" placeholder="name" name="name" required>
+            <label>Enter your email;</label>
+            <input type="email" name="email" id="" placeholder="email" required>
+            <label>Enter your subject;</label>
+            <input type="text" name="subject" placeholder="subject" required>
+            <label>Enter your message;</label>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="message" required></textarea>
             <button type="submit">Send</button>
 
         </form>

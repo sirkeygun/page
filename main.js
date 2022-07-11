@@ -22,6 +22,7 @@ const contactusController = require('./controllers/contactUs')
 const aboutController = require('./controllers/aboutus')
 const storeDeviceController = require('./controllers/storeDevices')
 const viewPostController = require('./controllers/viewPost')
+const contactusformController = require('./controllers/contactusform')
 
 // Create routes
 app.get('/', homepageControllers)
@@ -29,6 +30,7 @@ app.get('/contactus', contactusController)
 app.get('/about', aboutController)
 app.post('/post/blog', storeDeviceController)
 app.get('/post/:id', viewPostController)
+app.post('/contact/us', contactusformController)
 
 const port = process.env.PORT || 3100;
 
