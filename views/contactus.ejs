@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layouts/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('layouts/header'); %>
+    </header>
+   <main>
+        <form action="/contact/us" method="post">
+            <input type="text" placeholder="name" name="name">
+            <input type="email" name="email" id="" placeholder="email">
+            <input type="text" name="subject" placeholder="subject">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="message"></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+   </main>
+
+    <footer>
+        <%- include('layouts/footer'); %>
+    </footer>
+
+</body>
+
+</html>
