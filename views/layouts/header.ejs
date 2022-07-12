@@ -1,43 +1,15 @@
-<div class="top-container">
-    <h1>Gsm Specs</h1>
-    <p>Welcome to Our Tech World</p>
-</div>
-
-<div class="lower-container" id="myHeader">
-    <ul>
-        <li><a class="active" href="/">Home</a></li>
-        <li>
-            <div class="dropdown">
-                <a class="dropbtn">News</a>
-                <div class="dropdown-content">
-                    <div class="devices">
-                        <a href="devices">devices</a>
-
-                    </div>
-
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-        </li>
-
-        <li><a href="/contactus">Contact Us</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-</div>
-
-
-<script>
-    window.onscroll = function () { myFunction() };
-
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
-</script>
+<header class="primary-header">
+    <div class="container">
+        <a href="#"><img src="/img/" alt="GSM"></a>
+        <nav class="primary-nav">
+            <ul role="list" class="nav-list">
+                <li><a href="#">Device</a></li>
+                <li><a href="#">Apps & software</a></li>
+                <li><a href="#">Gaming</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Reach Out</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script style="module" src="/js/pagemain.js"></script>

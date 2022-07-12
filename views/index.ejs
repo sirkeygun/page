@@ -11,14 +11,17 @@
         <%- include('layouts/header'); %>
     </header>
     <main>
-        <% for (var i = 0; i < Device.length; i++) { %>
-            <div class="devices-homepage">
-                <a href="/post/<%= Device[i]._id %>">
-                    <h1><%= Device[i].name %></h1>
-                    <h2><%= Device[i].model%></h2>
-                </a>
-            </div>
-        <% } %>
+        <section>
+            <% for (var i = 0; i < Device.length; i++) { %>
+                <div class="devices-homepage">
+                    <a href="/post/<%= Device[i]._id %>">
+                        <h1><%= Device[i].name %></h1>
+                        <h2><%= Device[i].model%></h2>
+                    </a>
+                </div>
+            <% } %>
+        </section>
+        
     </main>
 
     <footer>
