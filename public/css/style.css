@@ -254,15 +254,26 @@ body {
 	align-items: center;
 	justify-content: center;
 	color: gray;
-	font-size: larger;
-	font-style: oblique;
-	font-weight: lighter;
+
 }
+
 .ads {
 	width: 20%;
 	float: left;
-	margin-left: 0;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1.5rem;
+
 }
+
+.ads a {
+	list-style: none;
+	text-decoration: none;
+}
+
 .main-content {
 	width: 80%;
 	float: left;
@@ -272,10 +283,19 @@ body {
 .side-grid {
 	float: right;
 	width: 20%;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1.5rem;
 }
-.grid { 
+
+.grid {
 	border-top-style: solid;
-	border-top-width: .1em; }
+	border-top-width: .1em;
+}
+
 /* end index page */
 
 /* start contact us page */
