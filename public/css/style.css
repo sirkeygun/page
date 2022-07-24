@@ -171,7 +171,7 @@
 .footer .social {
 	text-align: center;
 	padding-bottom: 25px;
-	color: #4b4c4d;
+	color: #060606;
 }
 
 .footer .social a {
@@ -253,7 +253,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: gray;
+	color: rgb(49, 47, 47);
 
 }
 
@@ -295,7 +295,22 @@ body {
 	border-top-style: solid;
 	border-top-width: .1em;
 }
-
+.vl {
+	border-left: 3px solid grey;
+	height: 500px;
+	position: absolute;
+	left: 20%;
+	margin-left: -9px;
+	top: 0;
+  }
+  .v2 {
+	border-left: 3px solid grey;
+	height: 500px;
+	position: absolute;
+	left: 80%;
+	margin-left: -9px;
+	top: 0;
+  }
 /* end index page */
 
 /* start contact us page */
